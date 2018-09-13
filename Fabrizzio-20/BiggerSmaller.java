@@ -16,7 +16,7 @@ public class BiggerSmaller {
             }
         } catch (Exception e) {
             System.out.println("ERROR: " + e);
-        }        
+        }
         readme.close();
     }
 }
