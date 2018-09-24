@@ -20,15 +20,21 @@ public class Sorpresa {
 
 			while ((sCurrentLine = br.readLine()) != null) {
                 System.out.println(sCurrentLine);
+                System.out.println("-----------");
                 
                 lines.add(Integer.parseInt(sCurrentLine));
             }
             
-            for (int i = lines.get(0); i < lines.get(1); i++){
-                if (i%lines.get(2) == 0){
-                    System.out.println(i);
+
+            try {
+                for (int i = lines.get(0); i <= lines.get(1); i++){                
+                    if (i%lines.get(2) == 0){
+                        System.out.println(i);
+                    }
                 }
-            }
+            } catch (Exception e) {
+                System.out.println("ERROR!: " + e);
+            }            
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
